@@ -17,13 +17,9 @@ Enter the project directory:
 ```bash
 cd "Something Project v0.2"
 
-2. Clean the Previous Build
-
 make clean
 
-3. Build the Project
-
-make
+make```
 
 4. Verify if the ISO Was Created
 
