@@ -2,15 +2,13 @@
 
 void kernel_main()
 {
+    print("\nSomething Project v0.2\n");
+    print("live@user S~/: \n\n");
     while (1)
     {
-        int com;
-
-        print("\nSomething Project v0.2\n");
-        print("live@user S~/: \n\n");
-
         print("1 - Calculator\n");
-        print("Choose: ");
+        print("live@user S~/: \n\n");
+        int com;
 
         input_int(&com);
 
