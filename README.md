@@ -41,7 +41,7 @@ Something Project ISO 💿
 
 ---
 
-📁 Project Structure
+##📁 Project Structure
 
 Something Project v0.2/
 ├── iso/
@@ -62,7 +62,7 @@ Something Project v0.2/
 
 ---
 
-🧠 Kernel
+##🧠 Kernel
 
 The kernel is written in C and uses low-level Assembly code for the boot process.
 
@@ -78,7 +78,7 @@ Main kernel files:
 
 ---
 
-⌨️ Keyboard
+##⌨️ Keyboard
 
 The "keyboard.c" and "keyboard.h" files handle keyboard input for the operating system.
 
@@ -86,7 +86,7 @@ This allows the kernel to receive input directly from the keyboard.
 
 ---
 
-🛠️ Technologies
+##🛠️ Technologies
 
 - C — Kernel and system code
 - Assembly — Boot and low-level code
@@ -96,7 +96,7 @@ This allows the kernel to receive input directly from the keyboard.
 
 ---
 
-🎨 Visual Identity
+##🎨 Visual Identity
 
 - Aesthetic: Unix-like
 - Style: Minimalist
@@ -104,7 +104,7 @@ This allows the kernel to receive input directly from the keyboard.
 
 ---
 
-🎯 Goals
+##🎯 Goals
 
 - [ ] Custom kernel
 - [x] C-based kernel
@@ -120,7 +120,7 @@ This allows the kernel to receive input directly from the keyboard.
 
 ---
 
-🚧 Status
+##🚧 Status
 
 Something Project v0.2 is currently in development.
 
@@ -128,7 +128,7 @@ The project is focused on building the operating system from the kernel upward.
 
 ---
 
-📜 License
+##📜 License
 
 This project does not currently have a defined license.
 
