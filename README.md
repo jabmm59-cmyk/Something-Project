@@ -10,7 +10,7 @@ It is a project of an OS made with A Kernel that works with normal C commands. F
 
    make clean
 
-```make
+   make```
 
 2. Verify if the ISO was created:
 
