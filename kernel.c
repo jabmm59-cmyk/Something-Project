@@ -6,7 +6,7 @@ void kernel_main()
     {
         int com;
 
-        print("\nSomething Project v0.2 (ALPHA)\n");
+        print("\nSomething Project v0.2\n");
         print("live@user S~/: \n\n");
 
         print("1 - Calculator\n");
