@@ -19,7 +19,7 @@ cd "Something Project v0.2"
 
 make clean
 
-make```
+```make
 
 4. Verify if the ISO Was Created
 
