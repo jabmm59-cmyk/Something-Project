@@ -1,14 +1,15 @@
 #include "kernel.h"
+#include "keyboard.h"
 
 void kernel_main()
 {
-    print("\nSomething Project v0.2\n");
-    print("live@user S~/: \n\n");
     while (1)
     {
-        print("1 - Calculator\n");
-        print("live@user S~/: \n\n");
         int com;
+
+        print("\nSomething Project v0.2\n");
+        print("1 - Calculator");     
+        print("live@user S~/: \n\n");
 
         input_int(&com);
 
