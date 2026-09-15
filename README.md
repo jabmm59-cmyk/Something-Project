@@ -65,15 +65,11 @@ Something Project v0.2/
 ├── iso/
 ├── Makefile
 ├── boot.s
-├── boot.o
 ├── kernel.c
 ├── kernel.h
-├── kernel.o
 ├── keyboard.c
 ├── keyboard.h
-├── keyboard.o
 ├── print.c
-├── print.o
 ├── kernel.bin
 ├── linker.ld
 └── README.md
