@@ -10,7 +10,6 @@
 
 The main goal is to make the kernel programming experience as simple and familiar as possible, using **normal C syntax** while hiding low-level hardware operations behind simple functions.
 
-```
 
 The project is currently in **early development**.
 
