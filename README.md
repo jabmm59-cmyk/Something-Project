@@ -218,7 +218,7 @@ something-project-v0.2.iso
 If you don't want to do the ISO in the terminal go to the tags of this repository and go to the Tag:
 
 ```text
-ISO
+Something Project ISO v0.2.1
 ```
 
 ---
