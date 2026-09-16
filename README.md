@@ -215,6 +215,12 @@ After a successful build, the ISO should be generated as:
 something-project-v0.2.iso
 ```
 
+If you don't want to do the ISO in the terminal go to the tags of this repository and go to the Tag:
+
+```text
+ISO
+```
+
 ---
 
 ## 🧪 Testing
