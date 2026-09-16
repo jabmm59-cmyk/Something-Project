@@ -12,23 +12,36 @@ start:
     mov ss, ax
     mov sp, 0x7C00
 
-    ; Carregar kernel para 0x100000
-    mov si, disk_packet
-    mov word [disk_packet + 2], 128
-    mov word [disk_packet + 4], 0x0000
-    mov word [disk_packet + 6], 0x0010
+    ; --------------------------------
+    ; Carregar o kernel
+    ; --------------------------------
 
-    mov eax, 1
-    mov dword [disk_packet + 8], eax
+    ; 16 setores = 8192 bytes
+    mov word [disk_packet + 2], 16
+
+    ; Offset = 0
+    mov word [disk_packet + 4], 0x0000
+
+    ; Segmento = 0x1000
+    ; Endereço físico = 0x10000
+    mov word [disk_packet + 6], 0x1000
+
+    ; Começar no setor/LBA 1
+    mov dword [disk_packet + 8], 1
     mov dword [disk_packet + 12], 0
 
     mov dl, [boot_drive]
+
+    mov si, disk_packet
     mov ah, 0x42
     int 0x13
 
     jc disk_error
 
+    ; --------------------------------
     ; Entrar no modo protegido
+    ; --------------------------------
+
     cli
 
     lgdt [gdt_descriptor]
@@ -61,40 +74,66 @@ halt:
     jmp halt
 
 
+; ====================================
+; MODO PROTEGIDO - 32 BITS
+; ====================================
+
 bits 32
 
 protected_mode:
+
     mov ax, 0x10
 
     mov ds, ax
     mov es, ax
     mov ss, ax
 
+    ; Stack do kernel
     mov esp, 0x90000
 
-    ; Kernel está em 0x100000
-    jmp 0x100000
+    ; Kernel foi carregado em 0x10000
+    jmp 0x10000
 
+
+; ====================================
+; DADOS
+; ====================================
 
 boot_drive db 0
 
 error_message db "Something Project: Disk error!", 0
 
 
-; Disk Address Packet
+; ====================================
+; DISK ADDRESS PACKET
+; ====================================
+
 disk_packet:
     db 0x10
     db 0
-    dw 128
+
+    ; Quantidade de setores
+    dw 16
+
+    ; Offset
     dw 0
-    dw 0x0010
+
+    ; Segmento
+    dw 0x1000
+
+    ; LBA inicial
     dq 1
 
 
+; ====================================
 ; GDT
+; ====================================
+
 gdt_start:
 
+gdt_null:
     dq 0
+
 
 gdt_code:
     dw 0xFFFF
@@ -104,6 +143,7 @@ gdt_code:
     db 11001111b
     db 0
 
+
 gdt_data:
     dw 0xFFFF
     dw 0
@@ -112,12 +152,19 @@ gdt_data:
     db 11001111b
     db 0
 
+
 gdt_end:
+
 
 gdt_descriptor:
     dw gdt_end - gdt_start - 1
     dd gdt_start
 
 
+; ====================================
+; ASSINATURA DE BOOT
+; ====================================
+
 times 510 - ($ - $$) db 0
+
 dw 0xAA55
