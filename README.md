@@ -542,6 +542,14 @@ boot.img
 something-project-v0.3.iso
 ```
 
+### You don't want to make the iso?
+
+Go to the tags of this project and search for the tag:
+
+```text
+ISO
+```
+
 ---
 
 ## 🎨 Visual Identity
