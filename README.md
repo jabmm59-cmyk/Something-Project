@@ -1,7 +1,7 @@
 # Something Project
 
 A small x86_64 operating system: boots with GRUB (Multiboot2), runs a shell, a file manager and a
-nano-like text editor. Early development (v0.4.0).
+nano-like text editor. Early development (v0.1.0).
 
 ## What works (and how it was verified)
 
