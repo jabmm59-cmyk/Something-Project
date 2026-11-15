@@ -40,7 +40,7 @@ means GRUB did not pass a Multiboot2 handshake).
 - Editor: lines longer than 80 columns are cut off on screen (the data is kept).
 - Text mode only (VGA 80x25). Boot is BIOS; UEFI-only firmware will not show text mode.
 
-## Not implemented (needs the pieces above first)
+## Future implementations
 
 Compilers and runtimes for Nativa, C/C++, Python, Lua, JavaScript, Rust, Java, HTML/CSS; a disk file system;
-a graphical desktop. These require processes, system calls, a C library and storage, in that order.
+a graphical desktop.
